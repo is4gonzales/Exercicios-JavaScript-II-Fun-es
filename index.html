@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Lista de Exercícios: JavaScript II</title>
+</head>
+
+<body>
+
+    <h1>Lista de Exercícios: JavaScript II</h1>
+
+    <div class="exercicio">
+        <h2>1. Limpeza de Cadastro</h2>
+        <p>Crie uma função que receba um nome com espaços extras e retorne apenas o primeiro nome em letras minúsculas.
+        </p>
+
+        <label for="inputNome">Digite o nome:</label><br>
+        <input type="text" id="inputNome" placeholder="Ex:   Ana Maria  ">
+        <br>
+        <button onclick="limparCadastro()">Processar Nome</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoNome">-</span>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="exercicio">
+        <h2>2. Validação de E-mail</h2>
+        <p>Verifique se termina com @gmail.com usando endsWith().</p>
+
+        <label for="inputNome">Digite o nome:</label>
+        <input type="text" id="inputEmail" placeholder="Ex:  anamaria@gmail.com">
+        <br>
+        <button onclick="validarEmail()">Validar</button>
+
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoEmail">-</span>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="exercicio">
+        <h2>3. Mascarar Cartão</h2>
+
+        <p>
+            Receba um número de cartão de crédito de 16 dígitos e exiba apenas os 4 últimos, substituindo os outros por
+            *.</p>
+
+        <label for="inputCartao">Digite o número do cartão:</label>
+        <input type="text" id="inputCartao" placeholder="Ex: 1234567812345678">
+        <br>
+        <button onclick="mascararCartao()">Mascarar</button>
+
+        <div class="resultado-box">
+            <strong>Resultado:</strong>
+            <span id="resultadoCartao">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>4. Localizar Usuário</h2>
+        <p>Encontra a posição do primeiro e do último ":" na string "admin:felipe:gerente".</p>
+        <button onclick="localizarUsuario()">Localizar Índices</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoLocalizacao">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>5. Gerador de Slug</h2>
+        <p>Transforme um título em um slug (ex: "como-aprender-js").</p>
+        <input type="text" id="inputTitulo" placeholder="Ex: Como Aprender JS">
+        <br>
+        <button onclick="gerarSlug()">Gerar Slug</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoSlug">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>6. Censura</h2>
+        <p>Substitui a palavra "erro" por "sucesso".</p>
+        <input type="text" id="inputFrase" placeholder="Houve um erro no sistema">
+        <br>
+        <button onclick="censurarFrase()">Corrigir</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoCensura">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>7. Extração de Domínio</h2>
+        <p>Extrai apenas o domínio "google" da URL "https://google.com".</p>
+        <button onclick="extrairDominio()">Extrair</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoDominio">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>8. Contagem de Caracteres (SMS)</h2>
+        <p>Verifica se a string tem mais de 160 caracteres.</p>
+        <textarea id="inputSMS" placeholder="Digite sua mensagem aqui..."></textarea><br>
+        <button onclick="validarSMS()">Verificar Tamanho</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoSMS">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>9. Formatação de CPF</h2>
+        <p>Recebe 11 números e formata como 000.000.000-00.</p>
+        <input type="text" id="inputCPF" maxlength="11" placeholder="12345678901">
+        <br>
+        <button onclick="formatarCPF()">Formatar</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoCPF">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>10. Repetição de Alerta</h2>
+        <p>Repete uma string um número determinado de vezes.</p>
+        <input type="text" id="inputAlerta" placeholder="Alerta! ">
+        <input type="number" id="inputRepeticoes" value="3" style="width: 50px;">
+        <br>
+        <button onclick="repetirAlerta()">Repetir</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoRepeticao">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <hr>
+    <h1>Bloco 2: O Poder da Matemática (Math)</h1>
+
+    <div class="exercicio">
+        <h2>11. Sorteio de Aluno</h2>
+        <p>Sorteia um número inteiro entre 1 e 30.</p>
+        <button onclick="sortearAluno()">Sortear</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoSorteio">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>12. Arredondamento de Nota</h2>
+        <p>Arredonda a nota para cima (ex: 4.1 vira 5.0).</p>
+        <input type="number" id="inputNota" step="0.1" placeholder="Ex: 4.1">
+        <br>
+        <button onclick="arredondarNota()">Arredondar</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoNota">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>13. Simulador de Dados</h2>
+        <p>Lança um dado de 6 lados.</p>
+        <button onclick="lancarDado()">Lançar Dado</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoDado">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>14. Preço Psicológico</h2>
+        <p>Exibe apenas a parte inteira do preço.</p>
+        <input type="number" id="inputPreco" step="0.01" placeholder="Ex: 19.99">
+        <br>
+        <button onclick="precoPsicologico()">Resultado</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoPreco">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>15. Cálculo de Raiz</h2>
+        <p>Retorna a raiz quadrada do número.</p>
+        <input type="number" id="inputRaiz" placeholder="Ex: 25">
+        <br>
+        <button onclick="calcularRaiz()">Calcular</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoRaiz">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>16. Hipotenusa</h2>
+        <p>Calcula a hipotenusa para os catetos 3 e 4.</p>
+        <button onclick="calcularHipotenusa()">Calcular (3 e 4)</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoHipotenusa">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>17. Menor Valor</h2>
+        <p>Encontra o menor preço no array [50, 20, 100, 80].</p>
+        <button onclick="encontrarMenor()">Achar Menor</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoMenor">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>18. Potência de Servidor</h2>
+        <p>Calcula 2 elevado a 10.</p>
+        <button onclick="calcularPotencia()">Calcular</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoPotencia">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>19. Conversor de Temperatura</h2>
+        <p>Converte Celsius para Fahrenheit (arredondado).</p>
+        <input type="number" id="inputCelsius" placeholder="Graus Celsius">
+        <br>
+        <button onclick="converterTemperatura()">Converter</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoFahrenheit">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>20. Verificador de Sinal</h2>
+        <p>Retorna se o número é Positivo, Negativo ou Zero.</p>
+        <input type="number" id="inputSinal" placeholder="Digite um número">
+        <br>
+        <button onclick="verificarSinal()">Verificar</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoSinal">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <hr>
+    <h1>Bloco 3: Manipulação de Tempo (Date)</h1>
+
+    <div class="exercicio">
+        <h2>21. Relógio Simples</h2>
+        <p>Exibe a hora e o minuto atual no formato HH:mm.</p>
+        <button onclick="exibirRelogio()">Ver Hora</button>
+        <div class="resultado-box">
+            <strong>Console/Resultado:</strong> <span id="resultadoRelogio">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>22. Dias para o Ano Novo</h2>
+        <p>Calcula quantos dias faltam para 1º de Janeiro.</p>
+        <button onclick="contagemAnoNovo()">Calcular Dias</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoAnoNovo">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>23. Dia da Semana</h2>
+        <p>Informa o nome do dia da semana de uma data específica.</p>
+        <input type="date" id="inputDataSemana">
+        <br>
+        <button onclick="verDiaSemana()">Ver Dia</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoSemana">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>24. Vencimento de Boleto</h2>
+        <p>Recebe a data de compra e soma 3 dias para o vencimento.</p>
+        <input type="date" id="inputDataCompra">
+        <br>
+        <button onclick="calcularVencimento()">Gerar Vencimento</button>
+        <div class="resultado-box">
+            <strong>Vencimento:</strong> <span id="resultadoVencimento">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>25. Validador de Maioridade</h2>
+        <p>Verifica se a pessoa tem 18 anos ou mais baseado no nascimento.</p>
+        <input type="date" id="inputNascimento">
+        <br>
+        <button onclick="validarMaioridade()">Verificar</button>
+        <div class="resultado-box">
+            <strong>Resultado:</strong> <span id="resultadoMaioridade">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>26. Timestamp de Log</h2>
+        <p>Gera o número de milissegundos desde 1970 (ID único).</p>
+        <button onclick="gerarTimestamp()">Gerar Log</button>
+        <div class="resultado-box">
+            <strong>Timestamp:</strong> <span id="resultadoLog">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <hr>
+    <h1>Bloco 4: Clean Code & Desafios Integrados</h1>
+
+    <div class="exercicio">
+        <h2>27. Refatoração (Clean Code)</h2>
+        <p>Calcula a idade de uma forma legível (Clique para ver o código no JS).</p>
+        <button onclick="executarRefatoracao()">Calcular Exemplo</button>
+        <div class="result-box">
+            <strong>Resultado:</strong> <span id="resultadoRefat">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>28. Motor de Busca de Clientes</h2>
+        <p>Busca nomes em uma lista (Felipe, Ana, Maria) ignorando maiúsculas.</p>
+        <input type="text" id="inputBusca" placeholder="Digite o nome...">
+        <button onclick="buscarClientes()">Buscar</button>
+        <div class="resultado-box">
+            <strong>Encontrados:</strong> <span id="resultadoBusca">-</span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>29. Simulador de Financiamento</h2>
+        <p>Gera um resumo com ID, nome limpo e parcelas (12x).</p>
+        <input type="text" id="inputNomeFinanc" placeholder="Nome do Cliente">
+        <input type="number" id="inputValorTotal" placeholder="Valor Total">
+        <button onclick="simularFinanciamento()">Simular</button>
+        <div class="resultado-box">
+            <pre id="resultadoFinanc">-</pre>
+        </div>
+    </div>
+
+<br>
+
+    <div class="exercicio">
+        <h2>30. Formatador de Moeda</h2>
+        <p>Transforma número em moeda brasileira (R$).</p>
+        <input type="number" id="inputMoeda" value="00,00" placeholder="00,00">
+        <button onclick="formatarMoeda()">Formatar</button>
+        <div class="resultado-box">
+            <strong>Valor:</strong> <span id="resultadoMoeda">-</span>
+        </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
